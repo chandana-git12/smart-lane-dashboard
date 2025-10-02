@@ -3,7 +3,6 @@ import React, { useState, useRef, useEffect } from 'react';
 const HaloBot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showWidget, setShowWidget] = useState(true);
-  const [showScrollPopup, setShowScrollPopup] = useState(false);
   const [messages, setMessages] = useState([
     {
       type: 'bot',
@@ -15,42 +14,19 @@ const HaloBot = () => {
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef(null);
   const chatInputRef = useRef(null);
-  const scrollTimeoutRef = useRef(null);
 
-  // Scroll detection to show temporary popup
+  // Scroll detection to show/hide widget
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      
       setShowWidget(scrollTop > 50);
-      
-      if (!isOpen && scrollTop > 100) {
-        setShowScrollPopup(true);
-        
-        if (scrollTimeoutRef.current) {
-          clearTimeout(scrollTimeoutRef.current);
-        }
-        
-        scrollTimeoutRef.current = setTimeout(() => {
-          setShowScrollPopup(false);
-        }, 2000);
-      }
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      if (scrollTimeoutRef.current) {
-        clearTimeout(scrollTimeoutRef.current);
-      }
     };
-  }, [isOpen]);
-
-  useEffect(() => {
-    if (isOpen) {
-      setShowScrollPopup(false);
-    }
-  }, [isOpen]);
+  }, []);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -217,6 +193,7 @@ const HaloBot = () => {
     <>
       {/* Chat Button */}
       <div
+        className="chat-button"
         onClick={() => setIsOpen(!isOpen)}
         style={{
           position: 'fixed',
@@ -253,87 +230,9 @@ const HaloBot = () => {
         </div>
       </div>
 
-      {/* Scroll-triggered Popup Widget */}
-      {!isOpen && showScrollPopup && (
-        <div
-          style={{
-            position: 'fixed',
-            bottom: '96px',
-            right: '24px',
-            width: '320px',
-            borderRadius: '12px',
-            background: 'linear-gradient(135deg, #0f172a, #1e293b)',
-            boxShadow: '0 25px 50px rgba(15, 23, 42, 0.2), 0 0 0 1px rgba(15, 23, 42, 0.1)',
-            zIndex: 999,
-            color: 'white',
-            padding: '20px',
-            animation: 'slideInFromRight 0.5s ease-out',
-          }}
-        >
-          <div style={{ marginBottom: '16px' }}>
-            <div style={{ 
-              fontSize: '18px', 
-              fontWeight: '600', 
-              marginBottom: '8px',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '8px'
-            }}>
-              <div style={{
-                width: '32px',
-                height: '32px',
-                borderRadius: '50%',
-                background: 'rgba(255, 255, 255, 0.2)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '16px',
-              }}>
-                🏢
-              </div>
-              Need help with our services?
-            </div>
-            <div style={{ 
-              fontSize: '14px', 
-              opacity: 0.9,
-              lineHeight: '1.4',
-              marginBottom: '16px'
-            }}>
-              We deliver pan India and specialize in Renewable Energy, Barcode Automation, and MEP Services. Get expert solutions tailored to your needs.
-            </div>
-          </div>
-          
-          <button
-            onClick={() => setIsOpen(true)}
-            style={{
-              width: '100%',
-              padding: '12px 16px',
-              borderRadius: '8px',
-              border: '2px solid rgba(255, 255, 255, 0.3)',
-              background: 'rgba(255, 255, 255, 0.1)',
-              color: 'white',
-              fontSize: '14px',
-              fontWeight: '500',
-              cursor: 'pointer',
-              transition: 'all 0.2s ease',
-              backdropFilter: 'blur(10px)',
-            }}
-            onMouseEnter={(e) => {
-              e.target.style.background = 'rgba(255, 255, 255, 0.2)';
-              e.target.style.borderColor = 'rgba(255, 255, 255, 0.5)';
-            }}
-            onMouseLeave={(e) => {
-              e.target.style.background = 'rgba(255, 255, 255, 0.1)';
-              e.target.style.borderColor = 'rgba(255, 255, 255, 0.3)';
-            }}
-          >
-            Ask a Question ✨
-          </button>
-        </div>
-      )}
-
       {/* Chat Window */}
       <div
+        className="chat-window"
         style={{
           position: 'fixed',
           bottom: '96px',
@@ -356,6 +255,7 @@ const HaloBot = () => {
       >
         {/* Header */}
         <div
+          className="chat-header"
           style={{
             background: 'linear-gradient(135deg, #0f172a, #1e293b)',
             padding: '20px 24px',
@@ -401,6 +301,7 @@ const HaloBot = () => {
 
         {/* Messages */}
         <div
+          className="chat-messages"
           style={{
             flex: 1,
             padding: '20px',
@@ -537,6 +438,7 @@ const HaloBot = () => {
 
         {/* Input */}
         <div
+          className="chat-input-container"
           style={{
             padding: '20px',
             background: 'white',
@@ -610,17 +512,6 @@ const HaloBot = () => {
 
       {/* Animations */}
       <style>{`
-        @keyframes slideInFromRight {
-          from {
-            opacity: 0;
-            transform: translateX(100px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-        
         @keyframes typing {
           0%, 60%, 100% {
             transform: translateY(0);
@@ -630,23 +521,52 @@ const HaloBot = () => {
           }
         }
         
-        @media (max-width: 480px) {
-          div[style*="width: '380px'"] {
-            width: calc(100vw - 32px) !important;
-            right: 16px !important;
-            bottom: 80px !important;
-            height: calc(100vh - 120px) !important;
-            max-height: 520px !important;
+        @media (max-width: 768px) {
+          .chat-window {
+            width: calc(100vw - 24px) !important;
+            height: calc(100vh - 100px) !important;
+            max-height: 600px !important;
+            right: 12px !important;
+            bottom: 84px !important;
+            border-radius: 16px !important;
           }
           
-          div[style*="width: '320px'"] {
-            width: calc(100vw - 48px) !important;
-            right: 16px !important;
-          }
-          
-          div[style*="bottom: '24px'"] {
+          .chat-button {
+            width: 56px !important;
+            height: 56px !important;
             bottom: 16px !important;
-            right: 16px !important;
+            right: 12px !important;
+          }
+        }
+        
+        @media (max-width: 480px) {
+          .chat-window {
+            width: 100vw !important;
+            height: 100vh !important;
+            max-height: 100vh !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            border-radius: 0 !important;
+            border: none !important;
+          }
+          
+          .chat-button {
+            width: 52px !important;
+            height: 52px !important;
+            bottom: 12px !important;
+            right: 12px !important;
+          }
+          
+          .chat-header {
+            padding: 16px 20px !important;
+          }
+          
+          .chat-messages {
+            padding: 16px !important;
+          }
+          
+          .chat-input-container {
+            padding: 16px !important;
           }
         }
       `}</style>
