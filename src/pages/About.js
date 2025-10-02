@@ -63,7 +63,7 @@ export default function HaloTechnologies() {
             </div>
           </div>
         ))}
-        
+
         {/* Slider Dots */}
         <div style={{
           position: 'absolute',
@@ -132,8 +132,8 @@ export default function HaloTechnologies() {
               transition: 'transform 0.3s ease',
               cursor: 'pointer'
             }}
-            onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-10px)'}
-            onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+              onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-10px)'}
+              onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
             >
               <p style={{ color: '#1e3a8a', fontSize: 'clamp(0.75rem, 2vw, 0.85rem)', fontWeight: '600', letterSpacing: '1.5px', marginBottom: '15px' }}>
                 OUR MISSION
@@ -155,8 +155,8 @@ export default function HaloTechnologies() {
               transition: 'transform 0.3s ease',
               cursor: 'pointer'
             }}
-            onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-10px)'}
-            onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+              onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-10px)'}
+              onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
             >
               <p style={{ color: '#1e3a8a', fontSize: 'clamp(0.75rem, 2vw, 0.85rem)', fontWeight: '600', letterSpacing: '1.5px', marginBottom: '15px' }}>
                 OUR VISION
@@ -251,8 +251,8 @@ export default function HaloTechnologies() {
                 padding: 'clamp(20px, 3vw, 30px)',
                 transition: 'transform 0.3s ease'
               }}
-              onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.1)'}
-              onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.1)'}
+                onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
               >
                 <h3 style={{
                   fontSize: 'clamp(2rem, 6vw, 3.5rem)',
