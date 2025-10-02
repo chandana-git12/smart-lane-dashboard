@@ -53,6 +53,7 @@ const Services = () => {
   }, []);
 
   const handleServiceClick = (path) => {
+    console.log('Navigating to:', path); // Debug log
     navigate(path);
   };
 
@@ -93,78 +94,8 @@ const Services = () => {
   }, []);
 
   return (
-    <div className="services-container">
-      {/* Rest of the JSX remains the same, just update the onClick */}
-      <div className="header-section">
-        <h1 
-          className="main-title"
-          data-id="main-title"
-          style={{
-            opacity: visibleElements.has('main-title') ? 1 : 0,
-            transform: visibleElements.has('main-title') ? 'translateY(0)' : 'translateY(30px)',
-            transition: 'all 0.8s ease-out'
-          }}
-        >
-          <span>Powering businesses with innovative</span>
-          <span>
-            <span style={{ color: '#f39c12' }}>electrical solutions</span> and sustainable
-          </span>
-          <span>energy systems that drive efficiency and growth across industries.</span>
-        </h1>
-      </div>
-
-      <div className="services-section">
-        <h2 
-          className="section-title"
-          data-id="section-title"
-          style={{
-            opacity: visibleElements.has('section-title') ? 1 : 0,
-            transform: visibleElements.has('section-title') ? 'translateY(0)' : 'translateY(30px)',
-            transition: 'all 0.8s ease-out'
-          }}
-        >
-          Our Services
-        </h2>
-        
-        <div className="services-list">
-          {services.map((service, index) => (
-            <div 
-              key={service.id}
-              className={`service-item ${hoveredService === service.id ? 'active' : ''}`}
-              data-id={service.id}
-              onClick={() => handleServiceClick(service.path)}
-              onMouseEnter={() => handleServiceInteraction(service.id)}
-              onMouseLeave={handleServiceLeave}
-              style={{
-                opacity: visibleElements.has(service.id) ? 1 : 0,
-                transform: visibleElements.has(service.id) ? 'translateX(0)' : (index % 2 === 0 ? 'translateX(-50px)' : 'translateX(50px)'),
-                transition: 'all 0.8s ease-out'
-              }}
-            >
-              <div className="service-content">
-                <div className="service-number">{service.number}</div>
-                <p className="service-description">{service.description}</p>
-              </div>
-              
-              <div className="service-image-container">
-                <img 
-                  src={serviceImages[service.id]} 
-                  alt={service.title} 
-                  className="service-image"
-                />
-              </div>
-              
-              <div className="service-title-section">
-                <h3 className="service-title">{service.title}</h3>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Keep all the existing styles */}
-      <style jsx>{`
-        /* All your existing styles remain the same */
+    <>
+      <style>{`
         .services-container {
           width: 100%;
           margin: 0;
@@ -388,7 +319,76 @@ const Services = () => {
           }
         }
       `}</style>
-    </div>
+
+      <div className="services-container">
+        <div className="header-section">
+          <h1 
+            className="main-title"
+            data-id="main-title"
+            style={{
+              opacity: visibleElements.has('main-title') ? 1 : 0,
+              transform: visibleElements.has('main-title') ? 'translateY(0)' : 'translateY(30px)',
+              transition: 'all 0.8s ease-out'
+            }}
+          >
+            <span>Powering businesses with innovative</span>
+            <span>
+              <span style={{ color: '#f39c12' }}>electrical solutions</span> and sustainable
+            </span>
+            <span>energy systems that drive efficiency and growth across industries.</span>
+          </h1>
+        </div>
+
+        <div className="services-section">
+          <h2 
+            className="section-title"
+            data-id="section-title"
+            style={{
+              opacity: visibleElements.has('section-title') ? 1 : 0,
+              transform: visibleElements.has('section-title') ? 'translateY(0)' : 'translateY(30px)',
+              transition: 'all 0.8s ease-out'
+            }}
+          >
+            Our Services
+          </h2>
+          
+          <div className="services-list">
+            {services.map((service, index) => (
+              <div 
+                key={service.id}
+                className={`service-item ${hoveredService === service.id ? 'active' : ''}`}
+                data-id={service.id}
+                onClick={() => handleServiceClick(service.path)}
+                onMouseEnter={() => handleServiceInteraction(service.id)}
+                onMouseLeave={handleServiceLeave}
+                style={{
+                  opacity: visibleElements.has(service.id) ? 1 : 0,
+                  transform: visibleElements.has(service.id) ? 'translateX(0)' : (index % 2 === 0 ? 'translateX(-50px)' : 'translateX(50px)'),
+                  transition: 'all 0.8s ease-out'
+                }}
+              >
+                <div className="service-content">
+                  <div className="service-number">{service.number}</div>
+                  <p className="service-description">{service.description}</p>
+                </div>
+                
+                <div className="service-image-container">
+                  <img 
+                    src={serviceImages[service.id]} 
+                    alt={service.title} 
+                    className="service-image"
+                  />
+                </div>
+                
+                <div className="service-title-section">
+                  <h3 className="service-title">{service.title}</h3>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

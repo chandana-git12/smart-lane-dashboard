@@ -22,77 +22,77 @@ const ProjectGallery = () => {
       id: 1,
       title: "Halo's solar energy revolution",
       description: "The renewable energy leader is turning up the power on sustainable solutions—using advanced technology and expertise to transform India's energy landscape.",
-      image: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      image: "https://solarquarter.com/wp-content/uploads/2022/10/32-1.png",
       category: "Solar Energy"
     },
     {
       id: 2,
       title: "3kW residential solar breakthrough",
       description: "Medium-scale residential installations delivering clean energy solutions across Bangalore with cutting-edge monitoring and grid-tie capabilities.",
-      image: "https://images.unsplash.com/photo-1497440001374-f26997328c1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80",
+      image: "https://5.imimg.com/data5/SELLER/Default/2023/9/342070137/VT/OM/KF/196623049/3kw-residential-solar-rooftop-power-plant.jpeg",
       category: "Solar Energy"
     },
     {
       id: 3,
       title: "Commercial solar innovation",
       description: "5kW installations powering businesses with smart grid integration, battery backup systems, and real-time performance optimization technology.",
-      image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      image: "https://www.ioscm.com/wp-content/uploads/2024/03/Shutterstock_1103176133-1200x627.jpg",
       category: "Solar Energy"
     },
     {
       id: 4,
       title: "Industrial scale solar mastery",
       description: "50kW installations in Tumkur district featuring advanced SCADA systems, real-time monitoring, and optimized energy distribution for manufacturing facilities.",
-      image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      image: "https://cdn.orsted.com/-/media/www/images/corp/us/project-sites/thalia-solar/permian.jpg?mh=1440",
       category: "Solar Energy"
     },
     {
       id: 5,
       title: "Utility-scale solar excellence",
       description: "100kW installation in Yadagiri district contributing to regional grid stability with advanced inverter technology and comprehensive weather monitoring systems.",
-      image: "https://images.unsplash.com/photo-1592833159155-c62df1b65634?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      image: "https://enernew.in/assets/images/utility-scale.png",
       category: "Solar Energy"
     },
     {
       id: 6,
       title: "Mega solar project leadership",
       description: "210kW installation in Chitradurga district powering rural communities with smart grid technology and efficient energy distribution across multiple villages.",
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      image: "https://www.soleosenergy.com/wp-content/uploads/2024/09/image-2.png",
       category: "Solar Energy"
     },
     {
       id: 7,
       title: "Massive renewable transformation",
       description: "400kW installation in Bagalakote featuring cutting-edge bifacial panels, AI-powered maintenance systems, and serving multiple districts with clean energy.",
-      image: "https://images.unsplash.com/photo-1545558014-8692077e9b5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      image: "https://iea.imgix.net/5860051d-c92e-4fea-8a90-12bf5334dbef/Renewables_2023_shutterstock_1527609272.jpg?auto=compress%2Cformat&fit=min&q=80&rect=0%2C566%2C5440%2C3058&w=1220&h=686&fit=crop&fm=jpg&q=70&auto=format",
       category: "Solar Energy"
     },
     {
       id: 8,
       title: "Agricultural solar revolution",
       description: "Solar-powered water pumping systems in Hassan district revolutionizing irrigation, helping farmers reduce costs while significantly increasing crop yields.",
-      image: "https://images.unsplash.com/photo-1574263867128-a3d5c1b1deaa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      image: "https://redington.solar/wp-content/uploads/2024/05/3.Maharashtras-Agri-Solar-Revolution-1024x683.jpg",
       category: "Agriculture"
     },
     {
       id: 9,
       title: "Hybrid power innovation",
       description: "Advanced hybrid inverter systems combining solar, grid, and battery power with intelligent switching technology for uninterrupted energy supply.",
-      image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      image: "https://avaada.com/wp-content/uploads/hybrid-power-system-applications.webp",
       category: "Agriculture"
     },
     {
       id: 10,
       title: "Wind energy excellence",
       description: "State-of-the-art wind turbine installations across Karnataka harnessing natural wind potential with smart grid integration for maximum efficiency.",
-      image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      image: "https://eac-consulting.de/wp-content/uploads/2024/06/AdobeStock_436114654-scaled.jpeg",
       category: "Wind Energy"
     },
     {
       id: 11,
       title: "Industrial turbo systems",
       description: "High-efficiency turbine systems for industrial applications delivering consistent power output with advanced engineering solutions in demanding environments.",
-      image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      image: "https://aws-cdn.prismmarketview.com/wp-content/uploads/2025/09/16133250/Screenshot-2025-09-16-at-1.32.21-PM.png",
       category: "Turbo Energy"
     }
   ];

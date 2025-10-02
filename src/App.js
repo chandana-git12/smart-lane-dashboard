@@ -36,9 +36,18 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          
+          {/* Service routes - matching the paths in Navbar/Footer/Services */}
+          <Route path="/services" element={<Service />} />
+          <Route path="/services/renewable-energy" element={<Renewable />} />
+          <Route path="/services/barcode-automation" element={<Barcode />} />
+          <Route path="/services/mep-solutions" element={<Mep />} />
+          
+          {/* Keep old routes for backward compatibility if needed */}
           <Route path="/renewable" element={<Renewable />} />
           <Route path="/barcode" element={<Barcode />} />
           <Route path="/mep" element={<Mep />} />
+          
           <Route path="/choose" element={<Choose />} />
           <Route path="/clients" element={<Clients />} />
           <Route path="/contact" element={<Contact />} />

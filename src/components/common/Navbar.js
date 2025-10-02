@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.png';
 
 const Navbar = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -239,17 +240,22 @@ const Navbar = () => {
         { name: 'MEP Solutions', path: '/services/mep-solutions' },
       ]
     },
-    { name: 'Careers', path: '/careers' },
-    { name: 'Blogs', path: '/blogs' },
+    { name: 'Careers', path: '/', redirectToHome: true }, // Redirect to home
+    { name: 'Blogs', path: '/', redirectToHome: true },   // Redirect to home
     { name: 'Contact Us', path: '/contact' },
   ];
 
   const isActive = (path) => location.pathname === path;
   const isServicesActive = () => location.pathname.startsWith('/services');
 
-  const handleNavLinkClick = () => {
+  const handleNavLinkClick = (item) => {
     setMobileMenuOpen(false);
     setServicesDropdownOpen(false);
+    
+    // If it's a redirect to home item, navigate to home
+    if (item.redirectToHome) {
+      navigate('/');
+    }
   };
 
   return (
@@ -346,7 +352,7 @@ const Navbar = () => {
 
       <nav className="navbar-container" style={styles.navbar}>
         <div style={styles.logoContainer}>
-          <Link to="/" style={styles.logo} onClick={handleNavLinkClick} className="logo">
+          <Link to="/" style={styles.logo} onClick={() => handleNavLinkClick({})} className="logo">
             <img 
               src={logo} 
               alt="Halo Technologies" 
@@ -392,7 +398,7 @@ const Navbar = () => {
                         borderBottom: index === item.subItems.length - 1 ? 'none' : styles.dropdownItem.borderBottom
                       }}
                       className="dropdown-item"
-                      onClick={handleNavLinkClick}
+                      onClick={() => handleNavLinkClick(item)}
                     >
                       {subItem.name}
                     </Link>
@@ -405,10 +411,10 @@ const Navbar = () => {
                 to={item.path}
                 style={{
                   ...styles.navLink,
-                  ...(isActive(item.path) ? styles.activeNavLink : {}),
+                  ...(isActive(item.path) && !item.redirectToHome ? styles.activeNavLink : {}),
                 }}
-                className={`nav-link ${isActive(item.path) ? 'active' : ''}`}
-                onClick={handleNavLinkClick}
+                className={`nav-link ${isActive(item.path) && !item.redirectToHome ? 'active' : ''}`}
+                onClick={() => handleNavLinkClick(item)}
               >
                 {item.name}
               </Link>
@@ -445,10 +451,10 @@ const Navbar = () => {
               to={item.path}
               style={{
                 ...styles.mobileNavLink,
-                ...(isActive(item.path) || (item.hasDropdown && isServicesActive()) ? styles.activeMobileNavLink : {}),
+                ...(isActive(item.path) && !item.redirectToHome || (item.hasDropdown && isServicesActive()) ? styles.activeMobileNavLink : {}),
               }}
               className="mobile-nav-link"
-              onClick={item.hasDropdown ? (e) => e.preventDefault() : handleNavLinkClick}
+              onClick={item.hasDropdown ? (e) => e.preventDefault() : () => handleNavLinkClick(item)}
             >
               {item.name}
               {item.hasDropdown && <span style={{ marginLeft: 'auto' }}>▼</span>}
@@ -463,7 +469,7 @@ const Navbar = () => {
                   ...(isActive(subItem.path) ? styles.activeMobileNavLink : {})
                 }}
                 className="mobile-nav-link"
-                onClick={handleNavLinkClick}
+                onClick={() => handleNavLinkClick(item)}
               >
                 {subItem.name}
               </Link>
