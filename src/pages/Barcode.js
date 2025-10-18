@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-const BarcodeAutomation = () => {
+const ThermalTransferRibbons = () => {
   const [visibleElements, setVisibleElements] = useState(new Set());
   const observerRef = useRef(null);
 
@@ -54,7 +54,7 @@ const BarcodeAutomation = () => {
       textTransform: 'uppercase'
     },
     heroTitle: {
-      fontSize: window.innerWidth <= 768 ? '2.5rem' : '5rem',
+      fontSize: window.innerWidth <= 768 ? '1.8rem' : '3.5rem',
       fontWeight: 900,
       lineHeight: 1,
       letterSpacing: '-4px',
@@ -63,7 +63,7 @@ const BarcodeAutomation = () => {
       textTransform: 'uppercase'
     },
     heroSubtitle: {
-      fontSize: window.innerWidth <= 768 ? '1.2rem' : '1.6rem',
+      fontSize: window.innerWidth <= 768 ? '0.95rem' : '1.2rem',
       maxWidth: '1000px',
       margin: '3rem auto 0',
       lineHeight: 1.8,
@@ -113,14 +113,14 @@ const BarcodeAutomation = () => {
       maxWidth: '1200px'
     },
     imageText: {
-      fontSize: window.innerWidth <= 768 ? '2.2rem' : '4rem',
+      fontSize: window.innerWidth <= 768 ? '1.8rem' : '3.2rem',
       fontWeight: 900,
       lineHeight: 1.1,
       letterSpacing: '-3px',
       textTransform: 'uppercase'
     },
     sectionTitle: {
-      fontSize: window.innerWidth <= 768 ? '2.2rem' : '4rem',
+      fontSize: window.innerWidth <= 768 ? '1.8rem' : '3.2rem',
       fontWeight: 900,
       marginBottom: '3rem',
       letterSpacing: '-3px',
@@ -133,53 +133,43 @@ const BarcodeAutomation = () => {
       width: '100%'
     },
     aboutText: {
-      fontSize: window.innerWidth <= 768 ? '1.2rem' : '1.6rem',
+      fontSize: window.innerWidth <= 768 ? '0.95rem' : '1.2rem',
       lineHeight: 1.9,
       maxWidth: '1000px',
       margin: '3rem auto 0',
       fontWeight: 300,
       opacity: 0.8
     },
-    solutionsGrid: {
+    ribbonsGrid: {
       display: 'grid',
-      gridTemplateColumns: window.innerWidth <= 768 ? '1fr' : 'repeat(3, 1fr)',
+      gridTemplateColumns: window.innerWidth <= 768 ? '1fr' : 'repeat(2, 1fr)',
       gap: window.innerWidth <= 768 ? '4rem' : '6rem',
       marginTop: '6rem'
     },
-    solutionBlock: {
+    ribbonBlock: {
       padding: 0,
       transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
     },
-    solutionTitle: {
-      fontSize: window.innerWidth <= 768 ? '1.8rem' : '2.2rem',
+    ribbonTitle: {
+      fontSize: window.innerWidth <= 768 ? '1.4rem' : '1.8rem',
       fontWeight: 800,
       marginBottom: '2rem',
       letterSpacing: '-2px',
       textTransform: 'uppercase'
     },
-    solutionItem: {
-      marginBottom: '2rem',
-      paddingBottom: '2rem',
-      borderBottom: '1px solid rgba(0, 0, 0, 0.1)'
-    },
-    solutionItemTitle: {
-      fontSize: window.innerWidth <= 768 ? '1.3rem' : '1.5rem',
-      fontWeight: 700,
-      marginBottom: '0.8rem',
-      letterSpacing: '-0.5px'
-    },
-    solutionItemText: {
-      fontSize: window.innerWidth <= 768 ? '1.05rem' : '1.2rem',
+    ribbonText: {
+      fontSize: window.innerWidth <= 768 ? '0.9rem' : '1rem',
       lineHeight: 1.7,
-      opacity: 0.7
+      opacity: 0.7,
+      marginBottom: '1.5rem'
     },
-    benefitsGrid: {
+    featuresGrid: {
       display: 'grid',
-      gridTemplateColumns: window.innerWidth <= 768 ? '1fr' : 'repeat(5, 1fr)',
+      gridTemplateColumns: window.innerWidth <= 768 ? '1fr' : 'repeat(3, 1fr)',
       gap: window.innerWidth <= 768 ? '3rem' : '4rem',
       marginTop: '6rem'
     },
-    benefitCard: {
+    featureCard: {
       padding: 0,
       minHeight: 'auto',
       display: 'flex',
@@ -187,24 +177,24 @@ const BarcodeAutomation = () => {
       justifyContent: 'flex-start',
       transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
     },
-    benefitTitle: {
-      fontSize: window.innerWidth <= 768 ? '1.4rem' : '1.6rem',
+    featureTitle: {
+      fontSize: window.innerWidth <= 768 ? '1.1rem' : '1.3rem',
       fontWeight: 800,
       marginBottom: '1rem',
       letterSpacing: '-1px'
     },
-    benefitText: {
-      fontSize: '1.05rem',
+    featureText: {
+      fontSize: '0.9rem',
       lineHeight: 1.7,
       opacity: 0.7
     },
-    industriesGrid: {
+    applicationsGrid: {
       display: 'grid',
       gridTemplateColumns: window.innerWidth <= 768 ? '1fr' : 'repeat(5, 1fr)',
       gap: window.innerWidth <= 768 ? '2rem' : '3rem',
       marginTop: '6rem'
     },
-    industryCard: {
+    applicationCard: {
       padding: window.innerWidth <= 768 ? '2rem 0' : '2.5rem 0',
       minHeight: 'auto',
       display: 'flex',
@@ -214,8 +204,8 @@ const BarcodeAutomation = () => {
       borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
       transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
     },
-    industryText: {
-      fontSize: window.innerWidth <= 768 ? '1.2rem' : '1.3rem',
+    applicationText: {
+      fontSize: window.innerWidth <= 768 ? '0.95rem' : '1rem',
       fontWeight: 700,
       letterSpacing: '-0.5px'
     }
@@ -249,7 +239,7 @@ const BarcodeAutomation = () => {
             transition: 'all 1.2s cubic-bezier(0.4, 0, 0.2, 1)'
           }}
         >
-          BARCODE & AUTOMATION SOLUTIONS
+          THERMAL TRANSFER RIBBONS
         </div>
         <h1 
           data-id="hero-title"
@@ -260,7 +250,7 @@ const BarcodeAutomation = () => {
             transition: 'all 1.5s cubic-bezier(0.4, 0, 0.2, 1) 0.3s'
           }}
         >
-          Smarter Operations with Barcode & Automation Solutions
+          Premium Quality Thermal Transfer Ribbons
         </h1>
         <p 
           data-id="hero-subtitle"
@@ -271,10 +261,10 @@ const BarcodeAutomation = () => {
             transition: 'all 1.5s cubic-bezier(0.4, 0, 0.2, 1) 0.6s'
           }}
         >
-          Smarter business starts here with advanced barcode technology and automation tools. 
-          Achieve accuracy, speed, and reliability with our comprehensive barcode products, 
-          consumables, and automation solutions designed to streamline operations and enhance 
-          supply chain visibility.
+          Our Thermal Transfer Ribbons (TTR) are engineered to deliver consistent, high-quality print 
+          performance across a wide range of labeling applications. Whether you need crisp text, sharp 
+          barcodes, or durable images, our ribbons are designed to meet the most demanding industrial 
+          and commercial needs.
         </p>
       </section>
 
@@ -283,7 +273,7 @@ const BarcodeAutomation = () => {
         data-id="image-1"
         style={{
           ...styles.fullscreenImage,
-          backgroundImage: 'url("https://5.imimg.com/data5/SELLER/Default/2024/3/401916710/QL/JD/FI/29083344/barcode-scanner-gun-500x500.png")',
+          backgroundImage: 'url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1600")',
           opacity: visibleElements.has('image-1') ? 1 : 0,
           transition: 'opacity 2s ease-out'
         }}
@@ -298,119 +288,85 @@ const BarcodeAutomation = () => {
               transition: 'all 1.5s cubic-bezier(0.4, 0, 0.2, 1) 0.5s'
             }}
           >
-            Real-time tracking and automation for seamless operations
+            Precision printing for every substrate and environment
           </p>
         </div>
       </section>
 
-      {/* About Section */}
+      {/* Introduction Section */}
       <section style={{...styles.section, ...styles.sectionBlack}}>
         <div style={styles.contentBox}>
           <div 
-            data-id="about-label"
+            data-id="intro-label"
             style={{
               ...styles.sectionLabel,
-              opacity: visibleElements.has('about-label') ? 0.5 : 0,
-              transform: visibleElements.has('about-label') ? 'translateX(0)' : 'translateX(-50px)',
+              opacity: visibleElements.has('intro-label') ? 0.5 : 0,
+              transform: visibleElements.has('intro-label') ? 'translateX(0)' : 'translateX(-50px)',
               transition: 'all 1s cubic-bezier(0.4, 0, 0.2, 1)'
             }}
           >
-            INTRODUCTION
+            COMPLETE RANGE
           </div>
           <h2 
-            data-id="about-title"
+            data-id="intro-title"
             style={{
               ...styles.sectionTitle,
-              opacity: visibleElements.has('about-title') ? 1 : 0,
-              transform: visibleElements.has('about-title') ? 'translateX(0)' : 'translateX(-80px)',
+              opacity: visibleElements.has('intro-title') ? 1 : 0,
+              transform: visibleElements.has('intro-title') ? 'translateX(0)' : 'translateX(-80px)',
               transition: 'all 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s'
             }}
           >
-            Comprehensive Barcode & Automation Solutions
+            Ribbon Types for Every Application
           </h2>
           <p 
-            data-id="about-text"
+            data-id="intro-text"
             style={{
               ...styles.aboutText,
-              opacity: visibleElements.has('about-text') ? 0.8 : 0,
-              transform: visibleElements.has('about-text') ? 'translateY(0)' : 'translateY(40px)',
+              opacity: visibleElements.has('intro-text') ? 0.8 : 0,
+              transform: visibleElements.has('intro-text') ? 'translateY(0)' : 'translateY(40px)',
               transition: 'all 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.4s'
             }}
           >
-            At Halo Technologies, we specialize in providing end-to-end barcode and automation solutions 
-            that enhance efficiency, accuracy, and productivity for businesses across industries. From 
-            multi-brand barcode printers and thermal transfer ribbons to custom labels and automated workflows, 
-            our solutions integrate cutting-edge hardware and intelligent software to streamline operations. 
-            Your supply chain's best friend – fast, accurate, and fully automated.
+            We offer a complete range of ribbon types to match your specific substrate and printing requirements. 
+            From cost-effective wax ribbons to extreme-duty resin formulations, our portfolio covers every need 
+            from retail labels to industrial asset tracking.
           </p>
         </div>
       </section>
 
-      {/* Solutions Section */}
+      {/* Ribbon Types Section */}
       <section style={{...styles.section, ...styles.sectionBlack}}>
         <div style={styles.contentBox}>
-          <div 
-            data-id="solutions-label"
-            style={{
-              ...styles.sectionLabel,
-              opacity: visibleElements.has('solutions-label') ? 0.5 : 0,
-              transition: 'all 1s ease-out'
-            }}
-          >
-            OUR SOLUTIONS
-          </div>
-          <h2 
-            data-id="solutions-title"
-            style={{
-              ...styles.sectionTitle,
-              opacity: visibleElements.has('solutions-title') ? 1 : 0,
-              transform: visibleElements.has('solutions-title') ? 'scale(1)' : 'scale(0.9)',
-              transition: 'all 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s'
-            }}
-          >
-            Barcode & Automation Services
-          </h2>
-          <div style={styles.solutionsGrid}>
+          <div style={styles.ribbonsGrid}>
             {[
               {
-                id: 'barcode-products',
-                title: 'Barcode Products',
-                items: [
-                  { title: 'Multi-Brand Barcode Printers (TTR & TTO)', text: 'High-performance printers compatible with leading brands for both small and large-scale operations' },
-                  { title: 'Barcode Labels & Stickers', text: 'Durable labels for retail, logistics, manufacturing, and healthcare applications' },
-                  { title: 'Barcode Software', text: 'Advanced software for label design, inventory tracking, and integration with ERP systems' },
-                  { title: 'Barcode Scanners', text: 'Fast and accurate scanners that ensure flawless data capture' },
-                  { title: 'Barcode Ribbons', text: 'High-quality ribbons ensuring clear, long-lasting prints for every application' }
-                ]
+                id: 'wax-ribbons',
+                title: '1. Wax Ribbons',
+                text: 'Ideal for paper-based labels, wax ribbons provide excellent print clarity and contrast. They are cost-effective, suitable for general-purpose printing, and perform well in low to moderate environmental conditions such as retail labeling, shipping, and warehouse applications.'
               },
               {
-                id: 'consumables',
-                title: 'Consumables & Custom Labels',
-                items: [
-                  { title: 'Thermal Transfer Ribbons', text: 'Wax, Wax-Resin, Resin, and TTO ribbons designed for durability across different surfaces and conditions' },
-                  { title: 'Custom Barcode Stickers', text: 'Available in multiple shapes, sizes, and finishes to meet your branding and operational needs' },
-                  { title: 'Asset & Inventory Tracking', text: 'Real-time tracking of goods to reduce errors and shrinkage' }
-                ]
+                id: 'wax-resin-ribbons',
+                title: '2. Wax-Resin Ribbons',
+                text: 'These combine the benefits of wax and resin formulations, offering enhanced durability and smudge resistance. Wax-Resin ribbons are perfect for semi-gloss papers, synthetics, and coated materials used in logistics, pharmaceuticals, and inventory labeling. They strike the right balance between print quality and resistance to abrasion, heat, and chemicals.'
               },
               {
-                id: 'automation-solutions',
-                title: 'Automation Solutions',
-                items: [
-                  { title: 'Industrial Automation', text: 'PLC-based systems and robotics for manufacturing processes' },
-                  { title: 'Warehouse & Supply Chain', text: 'Automated sorting, packaging, and RFID integration for seamless operations' },
-                  { title: 'Retail & POS Automation', text: 'Billing systems, customer tracking, and loyalty programs' },
-                  { title: 'ERP & CRM Integration', text: 'Seamless connectivity with existing business systems' },
-                  { title: 'IoT Integration', text: 'Connect devices for real-time data and analytics' }
-                ]
+                id: 'resin-ribbons',
+                title: '3. Resin Ribbons',
+                text: 'Designed for extreme durability, Resin ribbons are ideal for synthetic labels such as polyester, polypropylene, and vinyl. They ensure superior resistance to harsh environments, solvents, abrasion, and high temperatures, making them suitable for industrial, automotive, chemical, and laboratory applications where long-lasting print quality is essential.'
+              },
+              {
+                id: 'tto-ribbons',
+                title: '4. TTO Ribbons',
+                text: 'TTO (Thermal Transfer Overprinting) ribbons are formulated for flexible packaging films and high-speed coding applications. They deliver precise, sharp prints on plastic films, foils, and flexible packaging, commonly used in food, pharmaceutical, and cosmetic industries. These ribbons offer excellent adhesion, fast printing speeds, and superior resistance to smudging and fading.'
               }
-            ].map((solution, index) => (
+            ].map((ribbon, index) => (
               <div 
-                key={solution.id}
-                data-id={solution.id}
+                key={ribbon.id}
+                data-id={ribbon.id}
                 style={{
-                  ...styles.solutionBlock,
-                  opacity: visibleElements.has(solution.id) ? 1 : 0,
-                  transform: visibleElements.has(solution.id) ? 'translateY(0)' : 'translateY(60px)',
+                  ...styles.ribbonBlock,
+                  opacity: visibleElements.has(ribbon.id) ? 1 : 0,
+                  transform: visibleElements.has(ribbon.id) ? 'translateY(0)' : 'translateY(60px)',
                   transition: `all 1s cubic-bezier(0.4, 0, 0.2, 1) ${0.2 * index}s`
                 }}
                 onMouseEnter={(e) => {
@@ -420,20 +376,8 @@ const BarcodeAutomation = () => {
                   e.currentTarget.style.transform = 'translateX(0)';
                 }}
               >
-                <h3 style={styles.solutionTitle}>{solution.title}</h3>
-                {solution.items.map((item, i) => (
-                  <div 
-                    key={i}
-                    style={{
-                      ...styles.solutionItem,
-                      animation: visibleElements.has(solution.id) ? `slideInLeft 0.6s ease-out ${0.1 * i}s forwards` : 'none',
-                      borderBottom: i === solution.items.length - 1 ? 'none' : '1px solid rgba(0, 0, 0, 0.1)'
-                    }}
-                  >
-                    <div style={styles.solutionItemTitle}>{item.title}</div>
-                    <p style={styles.solutionItemText}>{item.text}</p>
-                  </div>
-                ))}
+                <h3 style={styles.ribbonTitle}>{ribbon.title}</h3>
+                <p style={styles.ribbonText}>{ribbon.text}</p>
               </div>
             ))}
           </div>
@@ -445,7 +389,7 @@ const BarcodeAutomation = () => {
         data-id="image-2"
         style={{
           ...styles.fullscreenImage,
-          backgroundImage: 'url("https://images.stockcake.com/public/1/9/b/19bfbf97-eb05-42dd-8b03-a84f15d60d02_large/scanning-warehouse-box-stockcake.jpg")',
+          backgroundImage: 'url("https://images.unsplash.com/photo-1553413077-190dd305871c?w=1600")',
           opacity: visibleElements.has('image-2') ? 1 : 0,
           transition: 'opacity 2s ease-out'
         }}
@@ -460,49 +404,50 @@ const BarcodeAutomation = () => {
               transition: 'all 1.5s cubic-bezier(0.4, 0, 0.2, 1) 0.5s'
             }}
           >
-            Intelligent automation systems built for precision and scalability
+            Superior adhesion and resistance for demanding environments
           </p>
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Key Features Section */}
       <section style={{...styles.section, ...styles.sectionBlack}}>
         <div style={styles.contentBox}>
           <div 
-            data-id="benefits-label"
+            data-id="features-label"
             style={{
               ...styles.sectionLabel,
-              opacity: visibleElements.has('benefits-label') ? 0.5 : 0,
+              opacity: visibleElements.has('features-label') ? 0.5 : 0,
               transition: 'all 1s ease-out'
             }}
           >
-            ADVANTAGES
+            PRODUCT EXCELLENCE
           </div>
           <h2 
-            data-id="benefits-title"
+            data-id="features-title"
             style={{
               ...styles.sectionTitle,
-              opacity: visibleElements.has('benefits-title') ? 1 : 0,
+              opacity: visibleElements.has('features-title') ? 1 : 0,
               transition: 'all 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s'
             }}
           >
-            Benefits of Our Solutions
+            Key Features
           </h2>
-          <div style={styles.benefitsGrid}>
+          <div style={styles.featuresGrid}>
             {[
-              { title: 'Accuracy', text: 'Minimize human errors in data entry and tracking' },
-              { title: 'Efficiency', text: 'Faster operations and reduced downtime' },
-              { title: 'Cost-Effective', text: 'Lower labor costs and operational wastage' },
-              { title: 'Scalability', text: 'Systems that grow with your business needs' },
-              { title: 'Integration', text: 'Seamless compatibility with ERP, CRM, and IoT' }
-            ].map((benefit, index) => (
+              { title: 'High Print Definition', text: 'Crystal-clear barcodes, logos, and text with exceptional sharpness and contrast' },
+              { title: 'Universal Compatibility', text: 'Works seamlessly with all major thermal transfer printer brands and models' },
+              { title: 'Superior Resistance', text: 'Excellent chemical, abrasion, and temperature resistance that varies by ribbon type' },
+              { title: 'Extended Shelf Life', text: 'Long-lasting performance and consistent quality throughout the product lifecycle' },
+              { title: 'Custom Configurations', text: 'Available in multiple widths, lengths, and core sizes to fit your specific needs' },
+              { title: 'Reliable Performance', text: 'Consistent print quality across thousands of labels with minimal printer maintenance' }
+            ].map((feature, index) => (
               <div 
                 key={index}
-                data-id={`benefit-${index}`}
+                data-id={`feature-${index}`}
                 style={{
-                  ...styles.benefitCard,
-                  opacity: visibleElements.has(`benefit-${index}`) ? 1 : 0,
-                  transform: visibleElements.has(`benefit-${index}`) ? 'translateY(0)' : 'translateY(50px)',
+                  ...styles.featureCard,
+                  opacity: visibleElements.has(`feature-${index}`) ? 1 : 0,
+                  transform: visibleElements.has(`feature-${index}`) ? 'translateY(0)' : 'translateY(50px)',
                   transition: `all 0.8s cubic-bezier(0.4, 0, 0.2, 1) ${0.15 * index}s`
                 }}
                 onMouseEnter={(e) => {
@@ -512,53 +457,53 @@ const BarcodeAutomation = () => {
                   e.currentTarget.style.transform = 'translateY(0)';
                 }}
               >
-                <div style={styles.benefitTitle}>{benefit.title}</div>
-                <p style={styles.benefitText}>{benefit.text}</p>
+                <div style={styles.featureTitle}>{feature.title}</div>
+                <p style={styles.featureText}>{feature.text}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Industries Section */}
+      {/* Applications Section */}
       <section style={{...styles.section, ...styles.sectionWhite}}>
         <div style={styles.contentBox}>
           <div 
-            data-id="industries-label"
+            data-id="applications-label"
             style={{
               ...styles.sectionLabel,
-              opacity: visibleElements.has('industries-label') ? 0.5 : 0,
+              opacity: visibleElements.has('applications-label') ? 0.5 : 0,
               transition: 'all 1s ease-out'
             }}
           >
-            SECTORS WE SERVE
+            USE CASES
           </div>
           <h2 
-            data-id="industries-title"
+            data-id="applications-title"
             style={{
               ...styles.sectionTitle,
-              opacity: visibleElements.has('industries-title') ? 1 : 0,
+              opacity: visibleElements.has('applications-title') ? 1 : 0,
               transition: 'all 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s',
               color: '#ffffff'
             }}
           >
-            Industries We Serve
+            Applications
           </h2>
-          <div style={styles.industriesGrid}>
+          <div style={styles.applicationsGrid}>
             {[
-              { name: 'Retail & E-Commerce', desc: 'Fast checkouts, inventory management, and customer convenience' },
-              { name: 'Logistics & Warehousing', desc: 'Accurate tracking of shipments and real-time supply chain visibility' },
-              { name: 'Manufacturing', desc: 'Process automation, product labeling, and traceability' },
-              { name: 'Healthcare & Pharmaceuticals', desc: 'Patient safety, medicine tracking, and equipment management' },
-              { name: 'Education & Libraries', desc: 'Smart inventory control, faster order fulfillment, and reduced errors' }
-            ].map((industry, index) => (
+              'Barcode Labels & Product Identification',
+              'Shipping, Retail, and Warehouse Tags',
+              'Food & Beverage Packaging',
+              'Pharmaceutical and Healthcare Labeling',
+              'Industrial & Asset Tracking'
+            ].map((application, index) => (
               <div 
                 key={index}
-                data-id={`industry-${index}`}
+                data-id={`application-${index}`}
                 style={{
-                  ...styles.industryCard,
-                  opacity: visibleElements.has(`industry-${index}`) ? 1 : 0,
-                  transform: visibleElements.has(`industry-${index}`) ? 'translateX(0)' : 'translateX(-30px)',
+                  ...styles.applicationCard,
+                  opacity: visibleElements.has(`application-${index}`) ? 1 : 0,
+                  transform: visibleElements.has(`application-${index}`) ? 'translateX(0)' : 'translateX(-30px)',
                   transition: `all 0.8s cubic-bezier(0.4, 0, 0.2, 1) ${0.12 * index}s`,
                   borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
                 }}
@@ -571,10 +516,7 @@ const BarcodeAutomation = () => {
                   e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
                 }}
               >
-                <div>
-                  <div style={{...styles.industryText, color: '#ffffff', marginBottom: '0.5rem'}}>{industry.name}</div>
-                  <div style={{fontSize: '0.95rem', opacity: 0.6, color: '#ffffff'}}>{industry.desc}</div>
-                </div>
+                <div style={{...styles.applicationText, color: '#ffffff'}}>{application}</div>
               </div>
             ))}
           </div>
@@ -584,4 +526,4 @@ const BarcodeAutomation = () => {
   );
 };
 
-export default BarcodeAutomation;
+export default ThermalTransferRibbons;

@@ -54,7 +54,7 @@ const MEPSolutions = () => {
       textTransform: 'uppercase'
     },
     heroTitle: {
-      fontSize: window.innerWidth <= 768 ? '2.2rem' : '4.5rem',
+      fontSize: window.innerWidth <= 768 ? '1.8rem' : '3.5rem',
       fontWeight: 900,
       lineHeight: 1,
       letterSpacing: '-4px',
@@ -63,7 +63,7 @@ const MEPSolutions = () => {
       textTransform: 'uppercase'
     },
     heroSubtitle: {
-      fontSize: window.innerWidth <= 768 ? '1.2rem' : '1.6rem',
+      fontSize: window.innerWidth <= 768 ? '0.95rem' : '1.2rem',
       maxWidth: '1000px',
       margin: '3rem auto 0',
       lineHeight: 1.8,
@@ -113,14 +113,14 @@ const MEPSolutions = () => {
       maxWidth: '1200px'
     },
     imageText: {
-      fontSize: window.innerWidth <= 768 ? '2.5rem' : '4.5rem',
+      fontSize: window.innerWidth <= 768 ? '2rem' : '3.5rem',
       fontWeight: 900,
       lineHeight: 1.1,
       letterSpacing: '-3px',
       textTransform: 'uppercase'
     },
     sectionTitle: {
-      fontSize: window.innerWidth <= 768 ? '2.5rem' : '4.5rem',
+      fontSize: window.innerWidth <= 768 ? '2rem' : '3.5rem',
       fontWeight: 900,
       marginBottom: '3rem',
       letterSpacing: '-3px',
@@ -133,7 +133,7 @@ const MEPSolutions = () => {
       width: '100%'
     },
     aboutText: {
-      fontSize: window.innerWidth <= 768 ? '1.2rem' : '1.6rem',
+      fontSize: window.innerWidth <= 768 ? '0.95rem' : '1.2rem',
       lineHeight: 1.9,
       maxWidth: '1000px',
       margin: '3rem auto 0',
@@ -142,7 +142,7 @@ const MEPSolutions = () => {
     },
     solutionsGrid: {
       display: 'grid',
-      gridTemplateColumns: window.innerWidth <= 768 ? '1fr' : 'repeat(4, 1fr)',
+      gridTemplateColumns: window.innerWidth <= 768 ? '1fr' : 'repeat(3, 1fr)',
       gap: window.innerWidth <= 768 ? '4rem' : '6rem',
       marginTop: '6rem'
     },
@@ -151,7 +151,7 @@ const MEPSolutions = () => {
       transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
     },
     solutionTitle: {
-      fontSize: window.innerWidth <= 768 ? '2rem' : '2.5rem',
+      fontSize: window.innerWidth <= 768 ? '1.3rem' : '1.8rem',
       fontWeight: 800,
       marginBottom: '2rem',
       letterSpacing: '-2px',
@@ -163,13 +163,13 @@ const MEPSolutions = () => {
       borderBottom: '1px solid rgba(0, 0, 0, 0.1)'
     },
     solutionItemTitle: {
-      fontSize: window.innerWidth <= 768 ? '1.3rem' : '1.5rem',
+      fontSize: window.innerWidth <= 768 ? '1rem' : '1.15rem',
       fontWeight: 700,
       marginBottom: '0.8rem',
       letterSpacing: '-0.5px'
     },
     solutionItemText: {
-      fontSize: window.innerWidth <= 768 ? '1.05rem' : '1.2rem',
+      fontSize: window.innerWidth <= 768 ? '0.9rem' : '1rem',
       lineHeight: 1.7,
       opacity: 0.7
     },
@@ -188,19 +188,19 @@ const MEPSolutions = () => {
       transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
     },
     benefitTitle: {
-      fontSize: window.innerWidth <= 768 ? '1.4rem' : '1.6rem',
+      fontSize: window.innerWidth <= 768 ? '1.1rem' : '1.3rem',
       fontWeight: 800,
       marginBottom: '1rem',
       letterSpacing: '-1px'
     },
     benefitText: {
-      fontSize: '1.05rem',
+      fontSize: '0.9rem',
       lineHeight: 1.7,
       opacity: 0.7
     },
     industriesGrid: {
       display: 'grid',
-      gridTemplateColumns: window.innerWidth <= 768 ? '1fr' : 'repeat(3, 1fr)',
+      gridTemplateColumns: window.innerWidth <= 768 ? '1fr' : 'repeat(2, 1fr)',
       gap: window.innerWidth <= 768 ? '2rem' : '3rem',
       marginTop: '6rem'
     },
@@ -215,7 +215,7 @@ const MEPSolutions = () => {
       transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
     },
     industryText: {
-      fontSize: window.innerWidth <= 768 ? '1.2rem' : '1.3rem',
+      fontSize: window.innerWidth <= 768 ? '1rem' : '1.1rem',
       fontWeight: 700,
       letterSpacing: '-0.5px'
     }
@@ -271,9 +271,7 @@ const MEPSolutions = () => {
             transition: 'all 1.5s cubic-bezier(0.4, 0, 0.2, 1) 0.6s'
           }}
         >
-          At Halo Technologies, we provide comprehensive MEP (Mechanical, Electrical & Plumbing) design 
-          and turnkey execution for commercial, industrial, and institutional projects. Our solutions are 
-          designed with precision, efficiency, safety, and compliance at their core.
+          Comprehensive design, supply, installation, testing, and commissioning of mechanical, electrical, and plumbing systems. We ensure that every system operates efficiently, safely, and in full compliance with international standards and local regulations.
         </p>
       </section>
 
@@ -297,7 +295,7 @@ const MEPSolutions = () => {
               transition: 'all 1.5s cubic-bezier(0.4, 0, 0.2, 1) 0.5s'
             }}
           >
-            Precision Engineering For Modern Infrastructure
+            End-to-End MEP Solutions with Quality and Performance
           </p>
         </div>
       </section>
@@ -325,7 +323,7 @@ const MEPSolutions = () => {
               transition: 'all 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s'
             }}
           >
-            COMPREHENSIVE MEP & TURNKEY SOLUTIONS
+            COMPREHENSIVE MEP SYSTEMS
           </h2>
           <p 
             data-id="about-text"
@@ -336,9 +334,7 @@ const MEPSolutions = () => {
               transition: 'all 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.4s'
             }}
           >
-            By integrating advanced engineering practices with practical on-site expertise, we deliver projects 
-            that are not only technically sound but also cost-effective and sustainable. From concept to completion, 
-            we engineer systems that perform today and are ready for tomorrow.
+            We deliver end-to-end MEP solutions with a focus on quality, performance, sustainability, and reliability. For residential, commercial, and industrial projects, we specialize in providing design, supply, installation, testing, and commissioning services that ensure every system operates efficiently and safely in full compliance with international standards.
           </p>
         </div>
       </section>
@@ -354,7 +350,7 @@ const MEPSolutions = () => {
               transition: 'all 1s ease-out'
             }}
           >
-            ENGINEERING EXPERTISE
+            CORE SERVICES
           </div>
           <h2 
             data-id="solutions-title"
@@ -365,50 +361,69 @@ const MEPSolutions = () => {
               transition: 'all 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s'
             }}
           >
-            MEP ENGINEERING SOLUTIONS
+            MEP CONTRACTORS
+          
           </h2>
           <div style={styles.solutionsGrid}>
             {[
               {
-                id: 'mechanical',
-                title: 'Mechanical Engineering',
+                id: 'hvac',
+                title: 'HVAC SYSTEMS',
                 items: [
-                  { title: 'HVAC Systems', text: 'Centralized air conditioning, ventilation, and climate control solutions tailored to ensure indoor comfort and air quality' },
-                  { title: 'Fire-Fighting Systems', text: 'Complete fire detection and suppression systems with sprinklers, hydrants, pumps, and alarms, meeting international safety codes' },
-                  { title: 'Piping & Ducting Systems', text: 'Precision-engineered piping networks for chilled water, compressed air, gas, and other utilities' },
-                  { title: 'Industrial Mechanical Installations', text: 'Boilers, chillers, compressors, and other heavy-duty equipment setup and commissioning' }
+                  { title: 'G.I & P.I Ducting', text: 'Fabrication and installation of Galvanized Iron and Pre-Insulated duct systems designed for efficient air distribution with vibration isolation and noise reduction' },
+                  { title: 'Chilled Water Piping', text: 'Complete chilled water network installation with chillers, air handling units, and fan coil units, fully insulated and pressure tested' },
+                  { title: 'Ventilation Systems', text: 'Fresh air supply and exhaust systems for basements, car parks, kitchens, and process areas with motorized dampers and air filters' },
+                  { title: 'Package & DX Units', text: 'Supply and installation of energy-efficient cooling solutions including VRF/VRV systems with complete control integration' }
                 ]
               },
               {
-                id: 'electrical',
-                title: 'Electrical Engineering',
+                id: 'fire-safety',
+                title: 'FIRE PROTECTION',
                 items: [
-                  { title: 'Power Distribution Systems', text: 'Low, medium, and high-voltage distribution networks for industries and commercial spaces' },
-                  { title: 'Lighting & Smart Controls', text: 'Energy-efficient lighting systems with automation for enhanced performance and reduced operational costs' },
-                  { title: 'Earthing & Lightning Protection', text: 'Ensuring system safety and equipment protection with compliant grounding solutions' },
-                  { title: 'Automation & Control Systems', text: 'Integration of SCADA, PLCs, and IoT-enabled smart systems for real-time monitoring and operational efficiency' },
-                  { title: 'Renewable Integration', text: 'Seamless integration of solar and wind systems into existing electrical setups' }
+                  { title: 'Hydrant & Sprinkler Systems', text: 'Design and installation of fire hydrant systems, automatic sprinklers, and hose reels with pressure-tested piping networks' },
+                  { title: 'Fire Alarm Systems', text: 'Conventional and addressable fire detection systems with smoke detectors, heat sensors, and manual call points fully integrated' },
+                  { title: 'Fire Suppression', text: 'Clean agent systems, CO₂, and FM200 solutions for sensitive areas like data centers and electrical panels' },
+                  { title: 'Emergency Lighting', text: 'Installation of emergency lighting and exit signage compliant with international safety codes' }
                 ]
               },
               {
                 id: 'plumbing',
-                title: 'Plumbing & Public Health',
+                title: 'PLUMBING WORKS',
                 items: [
-                  { title: 'Water Supply & Distribution', text: 'Design and installation of reliable piping networks for clean water supply' },
-                  { title: 'Drainage & Sewage Systems', text: 'Efficient removal and treatment of wastewater using eco-friendly solutions' },
-                  { title: 'Rainwater Harvesting Systems', text: 'Smart water conservation strategies for sustainable resource management' },
-                  { title: 'Advanced Piping Solutions', text: 'Use of high-quality materials (HDPE, PPR, CPVC) ensuring leak-free and durable installations' }
+                  { title: 'Water Supply Systems', text: 'Installation of domestic water supply networks with PPR/CPVC piping, pumps, valves, and pressure testing' },
+                  { title: 'Water Filtration', text: 'Advanced filtration, softening, and purification systems including reverse osmosis and UV treatment' },
+                  { title: 'Sewage & Drainage', text: 'Underground and surface drainage works with Sewage Treatment Plants for wastewater recycling and reuse' },
+                  { title: 'Rainwater Harvesting', text: 'Design and implementation of rainwater harvesting systems promoting sustainable water management' }
                 ]
               },
               {
-                id: 'turnkey',
-                title: 'Turnkey Project Execution',
+                id: 'electrical',
+                title: 'ELECTRICAL SYSTEMS',
                 items: [
-                  { title: 'Design & Engineering', text: '3D CAD & BIM-based designs for accuracy, clash detection, and efficient planning' },
-                  { title: 'Procurement', text: 'Strategic sourcing of high-quality equipment, materials, and systems from trusted global vendors' },
-                  { title: 'Installation & Commissioning', text: 'Skilled workforce ensuring timely and precise on-site execution' },
-                  { title: 'Testing & Handover', text: 'Rigorous system testing and validation for compliance, performance, and safety' },
-                  { title: 'After-Sales Service', text: 'Dedicated support teams for preventive maintenance and emergency services' }
+                  { title: 'Power Distribution', text: 'HT and LT switchgears, main and sub-distribution boards with load balancing and energy monitoring' },
+                  { title: 'Backup Power', text: 'Diesel generator sets with acoustic enclosures and UPS systems for uninterrupted power supply' },
+                  { title: 'Automation & Control', text: 'Building Management Systems, smart automation for HVAC, lighting, and energy management' },
+                  { title: 'Lighting & Safety', text: 'Energy-efficient LED lighting, street lighting, CCTV surveillance, and fire alarm system integration' }
+                ]
+              },
+              {
+                id: 'security',
+                title: 'SECURITY SYSTEMS',
+                items: [
+                  { title: 'Access Control', text: 'Biometric and RFID-based access control systems with intercom and visitor management integration' },
+                  { title: 'CCTV Surveillance', text: 'Intelligent CCTV networks enabling 24/7 monitoring and incident management' },
+                  { title: 'Cable Management', text: 'Cable trays, raceways, and conduiting with proper earthing and lightning protection' },
+                  { title: 'Safety Systems', text: 'Comprehensive grounding solutions and lightning protection ensuring system and personnel safety' }
+                ]
+              },
+              {
+                id: 'specialized',
+                title: 'SPECIALIZED SERVICES',
+                items: [
+                  { title: 'Kitchen Exhaust Systems', text: 'Kitchen hood exhaust and make-up air systems with electrostatic precipitators and carbon filters' },
+                  { title: 'LPG/NG Distribution', text: 'Liquefied Petroleum Gas and Natural Gas distribution networks with regulators and safety valves' },
+                  { title: 'Swimming Pool Works', text: 'Complete pool piping, filtration, circulation, lighting and temperature control systems' },
+                  { title: 'Testing & Commissioning', text: 'Comprehensive TAB services, system testing, and validation for performance and compliance' }
                 ]
               }
             ].map((solution, index) => (
@@ -419,7 +434,7 @@ const MEPSolutions = () => {
                   ...styles.solutionBlock,
                   opacity: visibleElements.has(solution.id) ? 1 : 0,
                   transform: visibleElements.has(solution.id) ? 'translateY(0)' : 'translateY(60px)',
-                  transition: `all 1s cubic-bezier(0.4, 0, 0.2, 1) ${0.2 * index}s`
+                  transition: `all 1s cubic-bezier(0.4, 0, 0.2, 1) ${0.15 * index}s`
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateX(10px)';
@@ -468,7 +483,7 @@ const MEPSolutions = () => {
               transition: 'all 1.5s cubic-bezier(0.4, 0, 0.2, 1) 0.5s'
             }}
           >
-            From Design To Commissioning, Delivering Excellence At Every Stage
+            Quality, Sustainability, and Reliability in Every Project
           </p>
         </div>
       </section>
@@ -494,15 +509,15 @@ const MEPSolutions = () => {
               transition: 'all 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s'
             }}
           >
-            WHY CHOOSE HALO TECHNOLOGIES
+            WHY CHOOSE US
           </h2>
           <div style={styles.benefitsGrid}>
             {[
-              { title: 'End-to-End Expertise', text: 'One partner for design, execution, commissioning, and maintenance' },
-              { title: 'Compliance & Standards', text: 'All projects follow international codes (ASHRAE, NFPA, NEC, IS codes)' },
-              { title: 'Energy Efficiency Focus', text: 'Solutions designed to reduce operational costs and carbon footprint' },
-              { title: 'On-Time Delivery', text: 'Strong project management ensures timely execution without compromising quality' },
-              { title: 'Sustainability & Future-Ready', text: 'Integration of green building concepts, smart automation, and renewable energy systems' }
+              { title: 'Qualified Engineers', text: 'Certified engineers and technicians with extensive MEP expertise' },
+              { title: 'Standards Compliance', text: 'Full compliance with ASHRAE, NFPA, SMACNA, IS, and BS standards' },
+              { title: 'Advanced Planning', text: 'Rigorous project planning, supervision, and quality control' },
+              { title: 'After-Sales Support', text: 'Reliable maintenance and comprehensive after-sales support' },
+              { title: 'Safety & Sustainability', text: 'Commitment to safety, sustainability, and optimal performance' }
             ].map((benefit, index) => (
               <div 
                 key={index}
@@ -554,12 +569,14 @@ const MEPSolutions = () => {
           </h2>
           <div style={styles.industriesGrid}>
             {[
-              'Commercial Complexes, IT Parks & Office Spaces',
+              'Commercial Complexes & IT Parks',
+              'Office Spaces & Corporate Buildings',
               'Manufacturing & Industrial Facilities',
               'Warehouses & Logistics Hubs',
               'Hospitals & Healthcare Institutions',
               'Educational Institutions & Campuses',
-              'Hotels, Retail, and Large Residential Projects'
+              'Hotels & Hospitality Sector',
+              'Retail & Large Residential Projects'
             ].map((industry, index) => (
               <div 
                 key={index}

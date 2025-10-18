@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import RenImage from '../components/assets/Ren.jpg';
 
 const serviceImages = {
   electrical: "https://www.wsp.com/-/media/service/global/image/healthcare/optegra_building-services-small.jpg",
   barcode: "https://qtrak.net/content/uploads/2019/04/products-qtrak-app.jpg",
-  renewable: "https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+  renewable: RenImage,
 };
 
 const Services = () => {

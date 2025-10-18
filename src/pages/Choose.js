@@ -1,19 +1,20 @@
 import React, { useState, useRef, useEffect } from "react";
+import RenImage from '../components/assets/mm.jpg';
 
 // Solar system cards data
 const cards = [
   { 
-    image: "https://i.pinimg.com/736x/71/fa/ca/71faca59b3dda6383d812bc11ec48857.jpg",
+    image: "https://static.scientificamerican.com/sciam/cache/file/CDA159A7-29E3-4913-B6EF59F84BA86E69_source.jpg?w=1200",
     title: "On-Grid Solar System",
     description: "Connected to utility grid"
   },
   { 
-    image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80",
+    image: "https://core-p-001.sitecorecontenthub.cloud/api/public/content/c84f8a8ee19f43218a72ee9c85b496aa?v=5d6f2637&t=XL1",
     title: "Hybrid Solar System",
     description: "Grid + Battery backup"
   },
   { 
-    image: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=800&q=80",
+    image: "https://mccoymart.com/post/wp-content/uploads/2019/04/on-grid-and-off-grid-solar-system.jpg",
     title: "Off-Grid Solar System",
     description: "Complete energy independence"
   },
@@ -294,7 +295,7 @@ export default function SolarCardsSection() {
         minHeight: "80vh",
         paddingTop: "10vh",
         paddingBottom: "30px",
-        backgroundImage: "url('https://images.pexels.com/photos/9893729/pexels-photo-9893729.jpeg')",
+        backgroundImage: `url(${RenImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

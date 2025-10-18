@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import A1Image from '../components/assets/a1.jpg';
+import A2Image from '../components/assets/a2.jpg';
+import A3Image from '../components/assets/a3.jpg';
 
 export default function HaloTechnologies() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const heroImages = [
-    'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1920',
-    'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=1920',
-    'https://images.unsplash.com/photo-1581094794329-c8112e6e0b6f?w=1920'
+    A1Image,
+    A2Image,
+    A3Image
   ];
 
   useEffect(() => {

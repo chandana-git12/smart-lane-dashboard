@@ -1,8 +1,7 @@
 import React from "react";
+import solarVideo from "../components/assets/Solar.mp4";
 
 const Home = () => {
-  const videoUrl = 'https://v.ftcdn.net/03/97/20/66/700_F_397206620_jxSJTIrFsVKR5AeeOabLfSxsnlKsoIXO_ST.mp4';
-
   const styles = {
     homePage: {
       fontFamily: "Arial, sans-serif",
@@ -104,15 +103,14 @@ const Home = () => {
             muted
             playsInline
           >
-            <source src={videoUrl} type="video/mp4" />
+            <source src={solarVideo} type="video/mp4" />
           </video>
 
           <div style={styles.overlay}></div>
 
           <div style={styles.heroContent}>
             <h1 style={{ ...styles.heading }} className="hero-heading">
-              <span style={styles.highlight}>Powering</span> Business{" "}
-              <span style={styles.highlight}>Empowering</span> Futures
+             
             </h1>
           </div>
         </section>
