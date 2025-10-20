@@ -26,35 +26,35 @@ import vidyashilpLogo from '../components/assets/vidyashilp.png';
 import wareeLogo from '../components/assets/waaree.png';
 
 const PartnersPage = () => {
-  // Partners / Brands
-  const partners = [
+  // ✅ TECHNOLOGY & SUPPLY PARTNERS (Brands)
+  const brands = [
     { name: 'Apla Apollo', logo: aplapolloLogo },
     { name: 'Ashirvad Pipes', logo: ashirvadLogo },
     { name: 'Hex Technologies', logo: hexLogo },
-    { name: 'E Pragathi', logo: epragathiLogo },
-    { name: 'Exedy', logo: exedyLogo },
     { name: 'Enphase Energy', logo: enphaseLogo },
     { name: 'Deye', logo: deyeLogo },
     { name: 'Solis', logo: solisLogo },
     { name: 'Loom Solar', logo: loomLogo },
     { name: 'Waaree', logo: wareeLogo },
     { name: 'Saatvik Green Energy', logo: saatvikLogo },
-    { name: 'Studer Innotec', logo: studerLogo }
-  ];
-
-  // Clients
-  const clients = [
+    { name: 'Studer Innotec', logo: studerLogo },
     { name: 'Adani Group', logo: adaniLogo },
     { name: 'JSW Group', logo: jswLogo },
-    { name: 'Tata Group', logo: tataLogo },
+    { name: 'Tata Group', logo: tataLogo }
+  ];
+
+  // ✅ CLIENTS
+  const clients = [
     { name: 'Britannia Industries', logo: britanniaLogo },
-    { name: 'Manthri Developers', logo: manthriLogo },
+    { name: 'Mantri Square', logo: manthriLogo },
     { name: 'Sobha Limited', logo: sobhaLogo },
-    { name: 'National Public School', logo: nationalPublicLogo },
     { name: 'Vidyashilp Academy', logo: vidyashilpLogo },
+    { name: 'Sri Vinayaka Fireworks', logo: sriVinayakaLogo },
+    { name: 'E Pragathi GP', logo: epragathiLogo },
+    { name: 'National Public School', logo: nationalPublicLogo },
     { name: 'V One Hotels', logo: vOneHotelLogo },
     { name: 'NHAI', logo: nhaiLogo },
-    { name: 'Sri Vinayaka', logo: sriVinayakaLogo }
+    { name: 'Exedy', logo: exedyLogo }
   ];
 
   const styles = {
@@ -161,6 +161,18 @@ const PartnersPage = () => {
     }
   };
 
+  const LogoScroll = ({ items, direction }) => (
+    <div style={styles.scrollContainer}>
+      <div style={{ ...styles.scrollTrack, ...(direction === 'left' ? styles.scrollLeftToRight : styles.scrollRightToLeft) }}>
+        {[...items, ...items].map((item, index) => (
+          <div key={`${item.name}-${index}`} className="logo-item" style={styles.logoItem}>
+            <img src={item.logo} alt={item.name} style={styles.logoImage} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+
   return (
     <div style={styles.container}>
       <style>
@@ -175,6 +187,7 @@ const PartnersPage = () => {
         }
         .logo-item:hover {
           transform: scale(1.05);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
         .logo-item:hover img {
           opacity: 1;
@@ -182,47 +195,31 @@ const PartnersPage = () => {
         `}
       </style>
 
-      {/* Hero */}
+      {/* Hero Section */}
       <section style={styles.hero}>
         <div style={styles.label}>WHO WE WORK WITH</div>
         <h1 style={styles.heroTitle}>Our Network</h1>
         <p style={styles.heroSubtitle}>
-          Collaborating with trusted industry leaders across solar panels, barcode automation, and MEP solutions.
+          Collaborating with trusted industry leaders across solar energy, automation, and infrastructure projects.
         </p>
       </section>
 
-      {/* Partners / Brands */}
+      {/* Technology & Supply Partners & Brands */}
       <section style={styles.section}>
         <div style={styles.sectionHeader}>
           <div style={styles.sectionLabel}>TECHNOLOGY & SUPPLY PARTNERS</div>
           <h2 style={styles.sectionTitle}>Our Brands</h2>
         </div>
-        <div style={styles.scrollContainer}>
-          <div style={{ ...styles.scrollTrack, ...styles.scrollLeftToRight }}>
-            {[...partners, ...partners].map((partner, index) => (
-              <div key={`partner-${index}`} className="logo-item" style={styles.logoItem}>
-                <img src={partner.logo} alt={partner.name} style={styles.logoImage} />
-              </div>
-            ))}
-          </div>
-        </div>
+        <LogoScroll items={brands} direction="left" />
       </section>
 
-      {/* Clients / Projects */}
+      {/* Clients */}
       <section style={styles.section}>
         <div style={styles.sectionHeader}>
           <div style={styles.sectionLabel}>PROJECTS & COLLABORATIONS</div>
           <h2 style={styles.sectionTitle}>Our Clients</h2>
         </div>
-        <div style={styles.scrollContainer}>
-          <div style={{ ...styles.scrollTrack, ...styles.scrollRightToLeft }}>
-            {[...clients, ...clients].map((client, index) => (
-              <div key={`client-${index}`} className="logo-item" style={styles.logoItem}>
-                <img src={client.logo} alt={client.name} style={styles.logoImage} />
-              </div>
-            ))}
-          </div>
-        </div>
+        <LogoScroll items={clients} direction="right" />
       </section>
     </div>
   );
