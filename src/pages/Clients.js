@@ -224,5 +224,4 @@ const PartnersPage = () => {
     </div>
   );
 };
-
 export default PartnersPage;
